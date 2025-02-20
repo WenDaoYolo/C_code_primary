@@ -16,7 +16,7 @@ int main() {
 	printf("float:%d\n", sizeof(float));
 	printf("double:%d\n", sizeof(double));
 
-	printf("sizeof求变量的空间大小:\n");
+	printf("sizeof操作符求变量的空间大小:\n");
 	printf("float g=1.33占%d个字节\n", sizeof(g));
 	return 0;
 
