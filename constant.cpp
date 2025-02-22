@@ -16,7 +16,7 @@ int main() {
 	enum Sex { MALE,FEMALE=9 };//自定义的枚举常量数据类型Sex
 	enum Sex t = MALE;		//定义Sex类型的常量t
 	enum Sex m = FEMALE;
-	printf("我是自定义的枚举常量数据类型MALE我未赋初值，默认值为：%d\n", t);//
+	printf("我是自定义的枚举常量数据类型MALE我未赋初值，默认值为：%d\n", t);
 	printf("我是自定义的枚举常量数据类型FEMALE,我赋了初值：%d", m);
 	return 0;
 }
