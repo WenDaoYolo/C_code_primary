@@ -1,4 +1,4 @@
 1.全局与局部变量名字冲突时，优先局部变量
 2.vs中处理scanf函数报错，用预处理命令#define _CRT_SECURE_NO_WARNINGS 1
-3.vs的空文件模板文件位置：vs安装路径下的newc++file.cpp，记得删除替换原模板文件
+3.vs的空文件模板文件位置：vs安装路径下的newc++file.cpp，需删除替换原模板文件
 4.
