@@ -4,13 +4,13 @@ int main() {
 	int a = 1, b = 2;
 	char k = 'M';
 	if (a > b)
-		printf("if·ÖÖ§½á¹¹,a>b\n");
+		printf("ifåˆ†æ”¯ç»“æž„,a>b\n");
 	else
 		printf("a<b");
 	for (int j = 0; j <= 10;j++) {
-		printf("ForÑ­»·,ÎÒÊÇµÚ%dÌõÓï¾ä\n",j);
+		printf("Forå¾ªçŽ¯,æˆ‘æ˜¯ç¬¬%dæ¡è¯­å¥\n",j);
 	}
-	printf("switchÑ¡ÔñÑ­»·\n");
+	printf("switché€‰æ‹©å¾ªçŽ¯\n");
 	switch (k) {
 	case 'M':printf("Monday"); break;
 	case 'T':printf("Tuesday"); break;
@@ -19,7 +19,7 @@ int main() {
 	}
 		int t = 0;
 		while(t < 10) {
-			printf("WhileÑ­»·%d´Î\n",t);
+			printf("Whileå¾ªçŽ¯%dæ¬¡\n",t);
 			t++;
 		}
 
