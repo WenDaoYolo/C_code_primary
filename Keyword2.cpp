@@ -2,43 +2,44 @@
 #include<stdio.h>
 #include<string.h>	
 void test01(){
-	static int a=1;	//staticÐÞÊÎ£¬¸Ä±äÁËÆä´æ´¢ÀàÐÍ,Òò´Ë±äÁ¿³öÁË×÷ÓÃÓò»á±»±£Áô¶ø·ÇÏú»Ù
+	static int a=1;	//staticä¿®é¥°ï¼Œæ”¹å˜äº†å…¶å­˜å‚¨ç±»åž‹,å› æ­¤å˜é‡å‡ºäº†ä½œç”¨åŸŸä¼šè¢«ä¿ç•™è€Œéžé”€æ¯
 	a++;
 	printf("%d\t",a);
 }
 
 int main() {
 	/*
-	typedef£ºÀàÐÍ¶¨Òå£¬×Ô¶¨ÒåÊý¾ÝÀàÐÍ¼°Æä¹Ø¼ü×Ö
+	typedefï¼šç±»åž‹å®šä¹‰ï¼Œè‡ªå®šä¹‰æ•°æ®ç±»åž‹åŠå…¶å…³é”®å­—
 	*/
-	typedef unsigned int uns_int;	//×Ô¶¨ÒåÊý¾ÝÀàÐÍuns_int
-	uns_int a = 10;					//Í¨¹ý×Ô¶¨ÒåÊý¾ÝÀàÐÍ´´½¨±äÁ¿
+	typedef unsigned int uns_int;	//è‡ªå®šä¹‰æ•°æ®ç±»åž‹uns_int
+	uns_int a = 10;					//é€šè¿‡è‡ªå®šä¹‰æ•°æ®ç±»åž‹åˆ›å»ºå˜é‡
 	printf("%d\n",a);
 	/*
-	³ÌÐòÖÐ£¬ÄÚ´æ·ÖÎª3¸ö´æ´¢Çø
-	Õ»Çø(Stack)£º´æ´¢¾Ö²¿±äÁ¿£¬º¯Êý²ÎÊýµÈÁÙÊ±Êý¾Ý	  ÆäÉúÃüÖÜÆÚÎª½øÈë×÷ÓÃÓò´´½¨£¬³ö×÷ÓÃÓòÏú»Ù
-	¶ÑÇø(Heap)£ºÓÃÓÚ¶¯Ì¬ÄÚ´æ·ÖÅä
-	¾²Ì¬Çø£º´æ´¢È«¾Ö±äÁ¿ºÍstaticÐÞÊÎµÄÁ¿	  ÆäÉúÃüÖÜÆÚÎª½øÈë×÷ÓÃÓò´´½¨£¬³ö×÷ÓÃÓòÏú»Ù(¼´Õû¸ö³ÌÐòµÄÉúÃüÖÜÆÚ)
+	ç¨‹åºä¸­ï¼Œå†…å­˜åˆ†ä¸º3ä¸ªå­˜å‚¨åŒº
+	æ ˆåŒº(Stack)ï¼šå­˜å‚¨å±€éƒ¨å˜é‡ï¼Œå‡½æ•°å‚æ•°ç­‰ä¸´æ—¶æ•°æ®	  å…¶ç”Ÿå‘½å‘¨æœŸä¸ºè¿›å…¥ä½œç”¨åŸŸåˆ›å»ºï¼Œå‡ºä½œç”¨åŸŸé”€æ¯
+	å †åŒº(Heap)ï¼šç”¨äºŽåŠ¨æ€å†…å­˜åˆ†é…
+	é™æ€åŒºï¼šå­˜å‚¨å…¨å±€å˜é‡å’Œstaticä¿®é¥°çš„é‡	  å…¶ç”Ÿå‘½å‘¨æœŸä¸ºè¿›å…¥ä½œç”¨åŸŸåˆ›å»ºï¼Œå‡ºä½œç”¨åŸŸé”€æ¯(å³æ•´ä¸ªç¨‹åºçš„ç”Ÿå‘½å‘¨æœŸ)
 
-	extern:ÉùÃ÷Íâ²¿·ûºÅ£¬ÓÃÓÚÁ´½ÓÒýÓÃÆäËûÔ´ÎÄ¼þÖÐµÄÊý¾ÝºÍº¯Êý
-	extern ÀàÐÍ Ãû×Ö
-	extern ÀàÐÍ º¯ÊýÃû(ÀàÐÍ[Ãû×Ö,¿ÉÊ¡ÂÔ],.....)
-	tip:¸ÃÊý¾Ý»òÕßº¯ÊýÓ¦¸Ã¾ßÓÐÍâ²¿Á´½ÓÊôÐÔ
+	extern:å£°æ˜Žå¤–éƒ¨ç¬¦å·ï¼Œç”¨äºŽé“¾æŽ¥å¼•ç”¨å…¶ä»–æºæ–‡ä»¶ä¸­çš„æ•°æ®å’Œå‡½æ•°
+	extern ç±»åž‹ åå­—
+	extern ç±»åž‹ å‡½æ•°å(ç±»åž‹[åå­—,å¯çœç•¥],.....)
+	tip:è¯¥æ•°æ®æˆ–è€…å‡½æ•°åº”è¯¥å…·æœ‰å¤–éƒ¨é“¾æŽ¥å±žæ€§
 
-	static:¾²Ì¬ÐÞÊÎ£¬¸Ä±äÊý¾ÝµÄ´æ´¢ÀàÐÍ£¬²¢½«Êý¾Ý¸ÄÎªÄÚ²¿Á´½ÓÊôÐÔ
-	Á´½ÓÊôÐÔ
-	ÄÚ²¿Á´½Ó£ºÖ»ÄÜÔÚËùÔÚÔ´ÎÄ¼þÄÚÊ¹ÓÃ
-	Íâ²¿Á´½Ó£º¿ÉÒÔÔÚÁ´½Óµ½Íâ²¿ÆäËûÔ´ÎÄ¼þ±»Ê¹ÓÃ£¬<È«¾Ö±äÁ¿>,<º¯Êý>¾ßÓÐÍâ²¿Á´½ÓÊôÐÔ
+	static:é™æ€ä¿®é¥°ï¼Œæ”¹å˜æ•°æ®çš„å­˜å‚¨ç±»åž‹ï¼Œå¹¶å°†æ•°æ®æ”¹ä¸ºå†…éƒ¨é“¾æŽ¥å±žæ€§
+	é“¾æŽ¥å±žæ€§
+	å†…éƒ¨é“¾æŽ¥ï¼šåªèƒ½åœ¨æ‰€åœ¨æºæ–‡ä»¶å†…ä½¿ç”¨
+	å¤–éƒ¨é“¾æŽ¥ï¼šå¯ä»¥åœ¨é“¾æŽ¥åˆ°å¤–éƒ¨å…¶ä»–æºæ–‡ä»¶è¢«ä½¿ç”¨ï¼Œ<å…¨å±€å˜é‡>,<å‡½æ•°>å…·æœ‰å¤–éƒ¨é“¾æŽ¥å±žæ€§
 
-	³£¼ûÓ¦ÓÃ³¡¾°
-	1.ÐÞÊÎ¾Ö²¿±äÁ¿---¸ü¸Ä´æ´¢ÀàÐÍ--ÉúÃüÖÜÆÚµÄ¸Ä±ä
-	2.ÐÞÊÎÈ«¾Ö±äÁ¿---¸Ä±äÁ´½ÓÊôÐÔ
-	3.ÐÞÊÎº¯Êý--¸Ä±äÁ´½ÓÊôÐÔ
+	å¸¸è§åº”ç”¨åœºæ™¯
+	1.ä¿®é¥°å±€éƒ¨å˜é‡---æ›´æ”¹å­˜å‚¨ç±»åž‹--ç”Ÿå‘½å‘¨æœŸçš„æ”¹å˜
+	2.ä¿®é¥°å…¨å±€å˜é‡---æ”¹å˜é“¾æŽ¥å±žæ€§
+	3.ä¿®é¥°å‡½æ•°--æ”¹å˜é“¾æŽ¥å±žæ€§
+ 	tip:staticä¿®é¥°å˜é‡åªæ˜¯æ”¹å˜å­˜å‚¨ç±»åž‹å’Œé“¾æŽ¥å±žæ€§ï¼Œå…¶æœ¬è´¨è¿˜æ˜¯å¯ä»¥æ”¹å˜çš„é‡
 	*/
 	for (int j = 0; j <= 10; j++)
 		test01();
-	extern int extern_test;		//ÉùÃ÷Íâ²¿È«¾Ö±äÁ¿
-	extern void extern_function(int,int);//ÉùÃ÷Íâ²¿º¯Êý
+	extern int extern_test;		//å£°æ˜Žå¤–éƒ¨å…¨å±€å˜é‡
+	extern void extern_function(int,int);//å£°æ˜Žå¤–éƒ¨å‡½æ•°
 	printf("%d\n",extern_test);			
 	extern_function(11,2);			
 
