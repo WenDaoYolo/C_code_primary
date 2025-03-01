@@ -10,7 +10,7 @@ int main() {
 	for (int j = 0; j <= 10;j++) {
 		printf("For循环,我是第%d条语句\n",j);
 	}
-	printf("switch选择循环\n");
+	printf("switch分支语句\n");
 	switch (k) {
 	case 'M':printf("Monday"); break;
 	case 'T':printf("Tuesday"); break;
