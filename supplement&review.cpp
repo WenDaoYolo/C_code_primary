@@ -4,8 +4,9 @@
 typedef unsigned int ui;
 
 void fun1(int a, int b){//函数内部尽量不要输出，要精简从而保证函数的<通用性>(建议)
-	if (a >= b)				//void 改int
-		printf("%d\n",a);		//return a;		注意函数可以有多个return(但只会执行到其中一个，因为在执行到return语句后函数就结束了)，但必须有(非空类型)
+	if (a >= b)				//void 改int                                                                                    c程序是逐行执行代码（面向过程）
+		printf("%d\n",a);		//return a;		注意函数可以有多个return，但只有一个return值(在执行到return语句后函数就结束了，只会执行到其中一个)，但必须有(非空类型)
+
 	else
 		printf("%d\n",b);		//return b;
 }
