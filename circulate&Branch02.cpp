@@ -7,8 +7,8 @@ int main() {
 	while (1) {
 		printf("我是while循环\n");
 		if (x > 2)
-			break;//break跳出整个循环(只能跳出当前所在层的循环,多层循环嵌套需要分别用多次break)
-				  //continue跳出本次循环(只结束本次循环,不会跳出整个循环)
+			break;//break跳出当前循环/结构(只能跳出当前所在层的循环,多层循环嵌套需要分别用多次break)
+				  //continue跳出本次循环(只结束本次循环,不会跳出当前整个循环)
 		x++;
 	}
 	do {
