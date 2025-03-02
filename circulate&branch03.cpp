@@ -67,12 +67,11 @@ int main() {
 		...
 	}
 	*/
-	{
 		int testif2;
 		for (testif2 = 1; testif2 <= 100; testif2++) {
 			if (testif2 % 2 != 0)
 				printf("%d是奇数\n",testif2);
-		}
+		        }
 
 		{	
 			//小记:case决定结构入口,break决定结构出口
@@ -119,6 +118,5 @@ int main() {
 			}
 
 		}
-	}
 	return 0;
 }
