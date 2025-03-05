@@ -24,7 +24,7 @@
 	case,break,default
 
 	循环结构
-	for				tip:C++和C99标准才支持在写for循环时创建变量->for(int a=0;a<100;a++)
+	for		tip:C++和C99标准才支持在写for循环时创建变量->for(int a=0;a<100;a++)——>注意此变量定义在循环体内是<局部变量>，出了循环体则会销毁
 	while
 	do while
 
