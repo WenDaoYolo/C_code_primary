@@ -83,7 +83,7 @@ int main() {
 			case 5/2:printf("今天是星期四\n"); break;//此处表明在需要的情况下可以混写(不一定全是一个类型的值,也不一定是单个值)
 			case 'F':printf("今天是星期五\n"); break;
 			default:printf("今天是周末\n");			//若以上条件都不满足则默认执行这条语句(可以省略,但大多数情况下为了考虑问题全面会写)
-			}										//
+			}						//各子句项包括default没有先后顺序而言
 			int testswitch2 = 6;
 			switch (testswitch2/2){			//表达式(值)
 			case 1:
