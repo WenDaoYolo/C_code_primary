@@ -77,7 +77,7 @@ int main() {
 			//小记:case决定结构入口,break决定结构出口
 			char testswitch = 'T';
 			switch (testswitch) {			//需要进行匹配的表达式(值)--->是一个整形常量表达式
-			case 'M':printf("今天是星期一\n"); break;//语句项		补充知识:字符其本质是以ASCLL码(十进制整数)的形式存储在计算机中，所以也是常量
+			case 'M':printf("今天是星期一\n"); break;//语句项		补充知识:字符其本质是以ASCLL码(十进制整数)的形式存储在计算机中，所以也是常量(字符型整型常量)
 			case 'T':printf("今天是星期二\n"); break;//case表达式,与case表达式相匹配则从此语句项开始执行语句(注:所有语句项)-->最后一个语句项break可以省略(本身执行完就结束了)
 			case 'W':printf("今天是星期三\n"); break;//break用于跳出当前循环/结构，避免继续执行下面的所有代码--所以switch和break是绑定的
 			case 5/2:printf("今天是星期四\n"); break;//此处表明在需要的情况下可以混写(不一定全是一个类型的值,也不一定是单个值)
