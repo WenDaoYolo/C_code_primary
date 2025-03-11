@@ -6,63 +6,65 @@
 int main() {
 	/*
 	
-	gotoÓï¾ä	Ìø×ªÓï¾ä£¬Ìø×ªµ½¶ÔÓ¦µÄ±êÊ¶·ûÈ¥Ö´ÐÐ³ÌÐò
-	Óï·¨:
+	gotoè¯­å¥	è·³è½¬è¯­å¥ï¼Œè·³è½¬åˆ°å¯¹åº”çš„æ ‡è¯†ç¬¦åŽ»æ‰§è¡Œç¨‹åº
+	è¯­æ³•:
 	
-	Ìø×ª±êÊ¶·û:
+	è·³è½¬æ ‡è¯†ç¬¦:
 
-	goto Ìø×ª±êÊ¶·û;
+	goto è·³è½¬æ ‡è¯†ç¬¦;
 	
-	ÀíÂÛÉÏgotoÓï¾äÊÇ²»ÐèÒªµÄ,¿ÉÒÔÓÃÆäËû´úÂëÊµÏÖ£¬»á´òÂÒ³ÌÐòµÄÖ´ÐÐË³Ðò,µ«ÔÚÌØ¶¨Çé¿öÏÂÓÐÒ»¶¨µÄ×÷ÓÃ		ÀýÈçµçÄÔ¹Ø»ú,gotoÒ»´ÎÌø³ö¶à´ÎÑ­»·µÈ
+	ç†è®ºä¸Šgotoè¯­å¥æ˜¯ä¸éœ€è¦çš„,å¯ä»¥ç”¨å…¶ä»–ä»£ç å®žçŽ°ï¼Œä¼šæ‰“ä¹±ç¨‹åºçš„æ‰§è¡Œé¡ºåº,ä½†åœ¨ç‰¹å®šæƒ…å†µä¸‹æœ‰ä¸€å®šçš„ä½œç”¨		ä¾‹å¦‚ç”µè„‘å…³æœº,gotoä¸€æ¬¡è·³å‡ºå¤šæ¬¡å¾ªçŽ¯ç­‰
 
-	¹Ø»úÃüÁîÐÐ:shutdown	-s -t xxx
-	½â¶Á:		¹Ø»ú   ÉèÖÃsetting	Ê±¼ätime Ãë
+	å…³æœºå‘½ä»¤è¡Œ:shutdown	-s -t xxx
+	è§£è¯»:		å…³æœº   è®¾ç½®setting	æ—¶é—´time ç§’
 
-	È¡Ïû¹Ø»úÃüÁîÐÐ:shutdown -a
+	å–æ¶ˆå…³æœºå‘½ä»¤è¡Œ:shutdown -a
 
-	¶¨Ê±¹Ø»úÃüÁîÐÐ:at 16:40 shutdown -s
+	å®šæ—¶å…³æœºå‘½ä»¤è¡Œ....
 
 
 	//////////////////////////////////////////////
 
-	±àÒëÔËÐÐ»áÔÚÏîÄ¿ÎÄ¼þ¼ÐÏÂ²úÉúÒ»¸ö¿ÉÖ´ÐÐÎÄ¼þ
-	Debug±àÒëÄ£Ê½£ºÓÃÓÚÉú³ÉÏîÄ¿µÄµ÷ÊÔºÍ¿ª·¢°æ±¾
-	Release±àÒëÄ£Ê½£ºÓÃÓÚÉú³É×îÖÕµÄÕýÊ½·¢ÐÐ°æ
+	ç¼–è¯‘è¿è¡Œä¼šåœ¨é¡¹ç›®æ–‡ä»¶å¤¹ä¸‹äº§ç”Ÿä¸€ä¸ªå¯æ‰§è¡Œæ–‡ä»¶
+	Debugç¼–è¯‘æ¨¡å¼ï¼šç”¨äºŽç”Ÿæˆé¡¹ç›®çš„è°ƒè¯•å’Œå¼€å‘ç‰ˆæœ¬
+	Releaseç¼–è¯‘æ¨¡å¼ï¼šç”¨äºŽç”Ÿæˆæœ€ç»ˆçš„æ­£å¼å‘è¡Œç‰ˆ
 
-	tip:Èô´úÂë¸üÐÂ£¬ÔòÐèÒªÖØÐÂ±àÒë²ÅÄÜÉú³ÉÐÂµÄ¿ÉÖ´ÐÐÎÄ¼þ
+	tip:è‹¥ä»£ç æ›´æ–°ï¼Œåˆ™éœ€è¦é‡æ–°ç¼–è¯‘æ‰èƒ½ç”Ÿæˆæ–°çš„å¯æ‰§è¡Œæ–‡ä»¶
 	//////////////////////////////////////////////
 
 
 
 
 
-	ÃüÁîÐÐ:
-	°Ñ¿ÉÖ´ÐÐÎÄ¼þÌí¼Óµ½±¾µØ·þÎñÖÐ,²¢¸ü¸ÄÆäÆô¶¯ÀàÐÍ			¡ªÅäºÏ¹Ø»úÃüÁî,ÊµÏÖ²¡¶¾Ô­Àí0.0
+	å­¦ä¹ æœ€æ–°çš„doså‘½ä»¤...
+ 	
+	å‘½ä»¤è¡Œ:
+	æŠŠå¯æ‰§è¡Œæ–‡ä»¶æ·»åŠ åˆ°æœ¬åœ°æœåŠ¡ä¸­,å¹¶æ›´æ”¹å…¶å¯åŠ¨ç±»åž‹			â€”é…åˆå…³æœºå‘½ä»¤,å®žçŽ°ç—…æ¯’åŽŸç†0.0
 
-	Ìí¼Ó·þÎñÃüÁîÐÐ:
-	sc.ÎÄ¼þÀàÐÍ create ·þÎñÃû³Æ binpath= "ÎÄ¼þµÄ¾ø¶ÔÂ·¾¶"
+	æ·»åŠ æœåŠ¡å‘½ä»¤è¡Œ:
+	sc.æ–‡ä»¶ç±»åž‹ create æœåŠ¡åç§° binpath= "æ–‡ä»¶çš„ç»å¯¹è·¯å¾„"
 	sc.exe create BUG binpath= "C:\Users\35474\Desktop\C\2025_2_18\01\x64\Release\01.exe"
 
-	É¾³ý·þÎñÃüÁî
-	sc.exe delete ·þÎñÃû³Æ
+	åˆ é™¤æœåŠ¡å‘½ä»¤
+	sc.exe delete æœåŠ¡åç§°
 
-	ÉèÖÃ·þÎñµÄÆô¶¯ÀàÐÍ:
-	sc.ÎÄ¼þÀàÐÍ config ·þÎñÆ÷Ãû³Æ start= auto
-	sc.exe config ·þÎñÆ÷Ãû³Æ start= auto
-	auto		×Ô¶¯
+	è®¾ç½®æœåŠ¡çš„å¯åŠ¨ç±»åž‹:
+	sc.æ–‡ä»¶ç±»åž‹ config æœåŠ¡å™¨åç§° start= auto
+	sc.exe config æœåŠ¡å™¨åç§° start= auto
+	auto		è‡ªåŠ¨
 	....
 
 
-	CÖÐÊµÏÖ¿ÉÖ´ÐÐ³ÌÐòÌí¼Óµ½·þÎñ
+	Cä¸­å®žçŽ°å¯æ‰§è¡Œç¨‹åºæ·»åŠ åˆ°æœåŠ¡
 	system("sc create BUG binpath= C:\\Users\\35474\\Desktop\\C\\2025_2_18\\01\\01\\x64\\Release\\01.exe");
-	´Ë´¦Â·¾¶¾Í²»ÔÙÐèÒªµ¥¶ÀÓÃÒýºÅ´¦Àí£¬ÒòÎªsystemº¯ÊýÒÑ¾­ÒýÓÃÁËË«ÒýºÅ
+	æ­¤å¤„è·¯å¾„å°±ä¸å†éœ€è¦å•ç‹¬ç”¨å¼•å·å¤„ç†ï¼Œå› ä¸ºsystemå‡½æ•°å·²ç»å¼•ç”¨äº†åŒå¼•å·
 
 
 
 
-	¹Ø¼üÎÊÌâ£ºÈ¨ÏÞ²»¹»
-	ÈçºÎÍ¨¹ýÃüÁîÐÐÇÐ»»¹ÜÀíÔ±Éí·ÝÀ´µ÷ÓÃÕâÐ©Ö¸Áî?
-	ºóÐøÉîÈëÑÐ¾¿
+	å…³é”®é—®é¢˜ï¼šæƒé™ä¸å¤Ÿ
+	å¦‚ä½•é€šè¿‡å‘½ä»¤è¡Œåˆ‡æ¢ç®¡ç†å‘˜èº«ä»½æ¥è°ƒç”¨è¿™äº›æŒ‡ä»¤?
+	åŽç»­æ·±å…¥ç ”ç©¶
 
 
 
@@ -83,10 +85,10 @@ int main() {
 	system("shutdown -s -t 240");
 
 	again:
-	printf("ÄãµÄµçÄÔ½«ÔÚËÄ·ÖÖÓºó¹Ø»ú,ÊäÈë£ºÎÒÊÇÖíÀ´È¡Ïû¹Ø»úO.o\n");
+	printf("ä½ çš„ç”µè„‘å°†åœ¨å››åˆ†é’ŸåŽå…³æœº,è¾“å…¥ï¼šæˆ‘æ˜¯çŒªæ¥å–æ¶ˆå…³æœºO.o\n");
 	scanf("%s",input);
 
-	if (strcmp(input,"ÎÒÊÇÖí")==0)
+	if (strcmp(input,"æˆ‘æ˜¯çŒª")==0)
 		system("shutdown -a");
 	else
 		goto again;
