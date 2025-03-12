@@ -2,51 +2,51 @@
 #include<stdio.h>
 /*
 
-functionÁ·Ï°2
-±àĞ´ÈçÏÂº¯Êı²¢Íê³ÉÆä¹¦ÄÜ
+functionç»ƒä¹ 2
+ç¼–å†™å¦‚ä¸‹å‡½æ•°å¹¶å®Œæˆå…¶åŠŸèƒ½
 
-1.¶ÔÒ»¸öÕûĞÍÊı×é½øĞĞ¶ş·Ö²éÕÒ
-2.Ğ´Ò»¸öº¯Êı£¬Ã¿´Îµ÷ÓÃÕâ¸öº¯Êı£¬num¾Í»á+1
+1.å¯¹ä¸€ä¸ªæ•´å‹æ•°ç»„è¿›è¡ŒäºŒåˆ†æŸ¥æ‰¾
+2.å†™ä¸€ä¸ªå‡½æ•°ï¼Œæ¯æ¬¡è°ƒç”¨è¿™ä¸ªå‡½æ•°ï¼Œnumå°±ä¼š+1
 
 
 */
 
 //1.
-void sort(int *arry1,int num){					//Ã°ÅİÅÅĞò		sort(Êı×éµØÖ·,Êı×é³¤¶È)
+void sort(int* arry1, int num) {					//å†’æ³¡æ’åº		sort(æ•°ç»„åœ°å€,æ•°ç»„é•¿åº¦)
 	for (int i = 1; i < num; i++)
-		for (int j = 0; j < num - 1;j++) {
+		for (int j = 0; j < num - 1; j++) {
 			if (arry1[j] > arry1[j + 1]) {
 				int temp = arry1[j];
-				arry1[j] = arry1[j+1];
-				arry1[j+1] = temp;
+				arry1[j] = arry1[j + 1];
+				arry1[j + 1] = temp;
 			}
 		}
 
 
 }
 
-//Êı×é×÷ÎªÊµ²Î´«Èë£¬´«µÄ¶¼ÊÇÊ×µØÖ·(ËùÒÔĞÎ²ÎÀïÃæ×°µÄÊÇµØÖ·)
-//ËùÒÔÔÙ´ÎÇ¿µ÷:½ÓÊÕÕâ¸öÊ×µØÖ·µÄĞÎ²Î¶¼»áÍË»¯Îª<Ö¸Õë>
-//ÔÚ±»µ÷º¯ÊıÖĞ£¬sizeof(Êı×éÃû)ÊÇ²»¶ÔµÄ,ÇóµÄÊÇµØÖ·µÄ´óĞ¡
-//ËùÒÔÏëÒªµÃµ½Êı×éÔªËØµÄ¸öÊı,µÃ´ÓÍâÃæ¼ÆËãºÃÔÙµ¥¶À×÷ÎªÊµ²Î´«½øÈ¥
+//æ•°ç»„ä½œä¸ºå®å‚ä¼ å…¥ï¼Œä¼ çš„éƒ½æ˜¯é¦–åœ°å€(æ‰€ä»¥å½¢å‚é‡Œé¢è£…çš„æ˜¯åœ°å€)
+//æ‰€ä»¥å†æ¬¡å¼ºè°ƒ:æ¥æ”¶è¿™ä¸ªé¦–åœ°å€çš„å½¢å‚éƒ½ä¼šé€€åŒ–ä¸º<æŒ‡é’ˆ>
+//åœ¨è¢«è°ƒå‡½æ•°ä¸­ï¼Œsizeof(æ•°ç»„å)æ˜¯ä¸å¯¹çš„,æ±‚çš„æ˜¯åœ°å€çš„å¤§å°
+//æ‰€ä»¥æƒ³è¦å¾—åˆ°æ•°ç»„å…ƒç´ çš„ä¸ªæ•°,å¾—ä»å¤–é¢è®¡ç®—å¥½å†å•ç‹¬ä½œä¸ºå®å‚ä¼ è¿›å»
 
 //1.
-int arryfind(int arry1[],int num,int longa) {		//¶ş·Ö²éÕÒ	arryfind(Êı×é,Ä¿±êÊı,Êı×é³¤¶È)
-		int left = 0, right = longa - 1,mid;		//ÕÒµ½·µ»Ø1£¬Î´ÕÒµ½·µ»Ø0
-		while (left<=right){
-			mid = (left + right) / 2;
-			if (arry1[mid] < num)
-				left = mid + 1;
-			else if (arry1[mid] > num)
-				right = mid - 1;
-			else
-				break;
-		}
-
-		if (arry1[mid] == num)
-			return 1;
+int arryfind(int arry1[], int num, int longa) {		//äºŒåˆ†æŸ¥æ‰¾	arryfind(æ•°ç»„,ç›®æ ‡æ•°,æ•°ç»„é•¿åº¦)
+	int left = 0, right = longa - 1, mid;		//æ‰¾åˆ°è¿”å›1ï¼Œæœªæ‰¾åˆ°è¿”å›0
+	while (left <= right) {
+		mid = (left + right) / 2;
+		if (arry1[mid] < num)
+			left = mid + 1;
+		else if (arry1[mid] > num)
+			right = mid - 1;
 		else
-			return 0;												
+			break;
+	}
+
+	if (arry1[mid] == num)
+		return 1;
+	else
+		return 0;
 }
 
 
@@ -54,42 +54,42 @@ int arryfind(int arry1[],int num,int longa) {		//¶ş·Ö²éÕÒ	arryfind(Êı×é,Ä¿±êÊı,Ê
 
 
 //2.
-int none(){
-	int static num=0;
-	num++;
-	return num;
+void none(int* num1) {
+	(*num1)++;
 }
 
 
 
 
 int main() {
-	int arry1[10],value;
-	printf("ÇëÊäÈë10¸öÊı:\n");
-	for(int i=0;i<10;i++)
-	scanf("%d",&arry1[i]);
-
-	printf("ÅÅĞòÇ°:\n");
+	int arry1[10], value,num=0;
+	printf("è¯·è¾“å…¥10ä¸ªæ•°:\n");
 	for (int i = 0; i < 10; i++)
-	printf("%d ",arry1[i]);
+		scanf("%d", &arry1[i]);
 
-	sort(arry1,sizeof(arry1)/sizeof(int));			
-
-	printf("\nÅÅĞòºó:\n");
+	printf("æ’åºå‰:\n");
 	for (int i = 0; i < 10; i++)
-	printf("%d ", arry1[i]);
-	printf("\nÇëÊäÈëÒª²éÕÒµÄÊı:");
-	scanf("%d",&value);
+		printf("%d ", arry1[i]);
 
-	
-	
-	if (arryfind(arry1, value, sizeof(arry1) / sizeof(int)))	
-		printf("ÕÒµ½ÁË\n");
+	sort(arry1, sizeof(arry1) / sizeof(int));
+
+	printf("\næ’åºå:\n");
+	for (int i = 0; i < 10; i++)
+		printf("%d ", arry1[i]);
+	printf("\nè¯·è¾“å…¥è¦æŸ¥æ‰¾çš„æ•°:");
+	scanf("%d", &value);
+
+
+
+	if (arryfind(arry1, value, sizeof(arry1) / sizeof(int)))
+		printf("æ‰¾åˆ°äº†\n");
 	else
-		printf("Ã»ÕÒµ½\n");
+		printf("æ²¡æ‰¾åˆ°\n");
 
+	for(int h=0;h<=3;h++)
+		none(&num);
 
-	printf("\nnum:%d\n",none());
+	printf("num=%d",num);
 
 	return 0;
 }
