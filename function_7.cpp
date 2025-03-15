@@ -76,7 +76,7 @@ void print(int num) {
 
 int Fib(int n) {							
 	if (n == 0)			//通过计数测试，求第40个fibonacci数时，第三个fibonacci数(即2)被重复计算了3000多万次！！	所以递归很容易栈溢出，要慎重使用				
-		return 0;
+		return 0;                                                       //时间成指数级增长
 	else if (n == 1)
 		return 1;
 	else
