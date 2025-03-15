@@ -75,7 +75,7 @@ void print(int num) {
 */
 
 int Fib(int n) {							
-	if (n == 0)							
+	if (n == 0)			//通过计数测试，求第40个fibonacci数时，第三个fibonacci数(即2)被重复计算了3000多万次！！				
 		return 0;
 	else if (n == 1)
 		return 1;
