@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include "game.h"
-//²ÂÊı×ÖÓÎÏ·¸´¿Ì
+//çŒœæ•°å­—æ¸¸æˆå¤åˆ»
 
 
 int main() {
