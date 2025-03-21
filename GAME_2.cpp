@@ -1,59 +1,59 @@
 #define _CRT_SECURE_NO_WARNINGS 1
-#include "SaoLei.h"				//Éæ¼°µ½×ø±êÖá,×îºÃÔÚÆÁÄ»´òÓ¡ÖáÏò--±ÜÃâ´«Í³ĞĞÁĞºÍÊıÑ§×ø±êÖáµÄ»ìÂÒ
+#include "SaoLei.h"				//æ¶‰åŠåˆ°åæ ‡è½´,æœ€å¥½åœ¨å±å¹•æ‰“å°è½´å‘--é¿å…ä¼ ç»Ÿè¡Œåˆ—å’Œæ•°å­¦åæ ‡è½´çš„æ··ä¹±
 
-void game() {
-	//´òÓ¡²Ëµ¥						
-	void Menu();					//ÓÅ»¯ÊÓ¾õ:µ¥¶À·ÅÖ÷º¯ÊıÏÔÊ¾£¬¸üºÃÊµÏÖÇåÆÁÄ»
-	//¶¨Òå²ÎÊı
-	char real[ROWS][COLS];			//ĞÅÏ¢´æ´¢ÆåÅÌ	AÀ×,aÎŞÀ×
-	char show[ROWS][COLS];			//ĞÅÏ¢Õ¹Ê¾ÆåÅÌ	*Î´Öª»òÎŞÀ×,xÀ×,
+void game() {						//æ¸¸æˆä¼˜åŒ–:åˆ¤æ–­å‘¨å›´æ²¡æœ‰é›·åˆ™å±•å¼€å‘¨å›´å¹¶ç»§ç»­åˆ¤æ–­ç›´åˆ°å¤–é¢ä¸€åœˆå…¨æ˜¯é›·...	â€”â€”>æ¶‰åŠåˆ°é€’å½’æ€ç»´
+	//æ‰“å°èœå•						
+	void Menu();					//ä¼˜åŒ–è§†è§‰:å•ç‹¬æ”¾ä¸»å‡½æ•°æ˜¾ç¤ºï¼Œæ›´å¥½å®ç°æ¸…å±å¹•
+	//å®šä¹‰å‚æ•°
+	char real[ROWS][COLS];			//ä¿¡æ¯å­˜å‚¨æ£‹ç›˜	Aé›·,aæ— é›·
+	char show[ROWS][COLS];			//ä¿¡æ¯å±•ç¤ºæ£‹ç›˜	*æœªçŸ¥æˆ–æ— é›·,xé›·,
 	int guessx, guessy,flag;
 	char Status=0;
-	//³õÊ¼»¯ÆåÅÌ
+	//åˆå§‹åŒ–æ£‹ç›˜
 	Reboard(real,'a');
 	Reboard(show, '*');
-	//Ëæ»ú²¼À×
+	//éšæœºå¸ƒé›·
 	RandPlant(real, show);
-	//´òÓ¡ÆåÅÌ
+	//æ‰“å°æ£‹ç›˜
 	PrintBoard(show);
-	//Íæ¼ÒÉ¨À×
-	while (1) {				//ÅĞ¶ÏºÏ·¨ĞÔ
+	//ç©å®¶æ‰«é›·
+	while (1) {				//åˆ¤æ–­åˆæ³•æ€§
 		do {
-			printf("ÇëÊäÈë×ø±ê>");
+			printf("è¯·è¾“å…¥åæ ‡>");
 			scanf("%d%d", &guessx, &guessy);
 			flag = !(guessx >= 1 && guessx <= ROW && guessy >= 1 && guessy <= COL&&(real[guessx][guessy] == 'A'|| real[guessx][guessy] == 'a'));
 			if(flag)
-				printf("×ø±ê·Ç·¨\n");
+				printf("åæ ‡éæ³•\n");
 		} while (flag);
-		system("cls");					//ÇåÆÁ
-		//»ñÈ¡ÓÎÏ·×´Ì¬
+		system("cls");					//æ¸…å±
+		//è·å–æ¸¸æˆçŠ¶æ€
 		Status = Playerscan(real,show, guessx, guessy);
 		if (Status != 'C')
-			break;						//Ìø³öÓÎÏ·
-		//´òÓ¡ÆåÅÌ
+			break;						//è·³å‡ºæ¸¸æˆ
+		//æ‰“å°æ£‹ç›˜
 		PrintBoard(show);
 	}
 
-		//ÅĞ¶ÏÓÎÏ·½á¹û
+		//åˆ¤æ–­æ¸¸æˆç»“æœ
 		if (Status == 'G') {
-			show[guessx][guessy] = 'x';	//ÏÔÊ¾²Èµ½µÄÀ×
+			show[guessx][guessy] = 'x';	//æ˜¾ç¤ºè¸©åˆ°çš„é›·
 			PrintBoard(show);
 			printf("GAME OVER!\n");
 	}else if (Status == 'W') {
 			PrintBoard(show);
 			printf("YOU WIN!\n");
 		}
-		Sleep(2500);					//ÑÓÊ±ÇåÆÁ
+		Sleep(2500);					//å»¶æ—¶æ¸…å±
 		system("cls");
 }
 
 int main() {
-	//¶¨Òå²ÎÊı				
+	//å®šä¹‰å‚æ•°				
 	int choose;
 	srand((unsigned int)time(NULL));
 	do {
 		Menu();
-		printf("ÇëÊäÈë>");
+		printf("è¯·è¾“å…¥>");
 		scanf("%d",&choose);
 		switch (choose){
 		case 1:
@@ -63,7 +63,7 @@ int main() {
 			printf("Game exited!\n");
 			break;
 		default:
-			printf("ÊäÈë´íÎó!\n");
+			printf("è¾“å…¥é”™è¯¯!\n");
 			break;
 		}
 	} while (choose!=2);
